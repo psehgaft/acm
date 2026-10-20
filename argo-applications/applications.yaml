@@ -9,12 +9,12 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/Vikaspogu/acm.git
+        repoURL: https://github.com/psehgaft/acm.git
         revision: "main"
         directories:
           - path: kustomize/cluster-overlays/${cluster}/*
     - git:
-        repoURL: https://github.com/Vikaspogu/acm.git
+        repoURL: https://github.com/psehgaft/acm.git
         revision: "main"
         directories:
           - path: helm/cluster-overlays/${cluster}/*
@@ -23,7 +23,7 @@ spec:
           spec:
             project: "default"
             source:
-              repoURL: https://github.com/Vikaspogu/acm.git
+              repoURL: https://github.com/psehgaft/acm.git
               path: helm/charts/{{.path.basename}}
               helm:
                 valueFiles:
@@ -65,4 +65,4 @@ spec:
             maxDuration: "10m0s"
       source:
         path: "{{.path.path}}"
-        repoURL: "https://github.com/Vikaspogu/acm.git"
+        repoURL: "https://github.com/psehgaft/acm.git"
