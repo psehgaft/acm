@@ -15,7 +15,7 @@ spec:
                   cluster.open-cluster-management.io/placement: lab-clusterset
               requeueAfterSeconds: 3600
           - git:
-              repoURL: https://github.com/Vikaspogu/acm.git
+              repoURL: https://github.com/psehgaft/acm.git
               revision: "main"
               directories:
                 - path: kustomize/cluster-bootstrap/*
@@ -52,5 +52,5 @@ spec:
           selfHeal: true
       source:
         path: "{{path}}"
-        repoURL: "https://github.com/Vikaspogu/acm.git"
+        repoURL: "https://github.com/psehgaft/acm.git"
         targetRevision: "main"
